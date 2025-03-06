@@ -23,7 +23,7 @@ class MathUtilityDDTTest {
         };
     }
     @ParameterizedTest
-    @MethodSource("initData")   //ĐÂY CHÍNH LÀ CODE DDT
+    @MethodSource("initData")   //DTT- DATA DRIVEN TESTING
     public void testFactorialGivenRightArgumentReturnWell(int n, long expectedResult){
 
         //đi so sánh 2 giá trị coi expected == actual???
