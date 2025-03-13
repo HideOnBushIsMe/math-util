@@ -16,15 +16,37 @@ public class MathUtility {
             throw new IllegalArgumentException(" Invalid n. n must be in the range [0, 20]");
         } // gặp ngoại lệ hàm dừng luôn
 
-        long result = 1;
-        if( n == 0 ){
+
+        if( n == 0 || n ==1 ){
             return 1; // thoat sớm khi có thể, return ngay khi có thể
         }
-        for (int i = 1; i <=n ; i++) {
-            result *= i;
-        }
-        return result;
+        return n * getFactorial(n-1); // xong đệ quy
+        // 5! = 1*2*3*4*5
+        //    = 4!*5
+        // 4! = 3!*4
+        // 3! = 2!*3
+        // 2! = 1!*2
+        // 1! = 1
+        // đệ quy - recursion
+        // gọi lại chính mình với quy mô nhỏ hơn - búp bê nga
+        // n! = n*(n-1)!
     }
+//    public static long getFactorial(int n) {
+//// kĩ thuật nhồi con heo đất, nhồi thịt
+//        // kĩ thuật nhân đồi, cộng dồn giá trị
+//        if (n <0 || n > 20){
+//            throw new IllegalArgumentException(" Invalid n. n must be in the range [0, 20]");
+//        } // gặp ngoại lệ hàm dừng luôn
+//
+//        long result = 1;
+//        if( n == 0 ){
+//            return 1; // thoat sớm khi có thể, return ngay khi có thể
+//        }
+//        for (int i = 1; i <=n ; i++) {
+//            result *= i;
+//        }
+//        return result;
+//    }
 }
     //dan dev phai test code cua  minh
     //? họ test code ntn
